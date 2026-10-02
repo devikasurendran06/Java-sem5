@@ -32,7 +32,7 @@ class Customer extends Thread {
     }
 }
 
-public class Multithreading_with_Synchronization {
+public class Multithreading {
     public static void main(String[] args) throws InterruptedException {
 
         TicketBooking booking = new TicketBooking();
