@@ -3,15 +3,15 @@ import java.sql.*;
 public class Jdbc2 {
         public static void main(String args[]) throws Exception {
                 String url = "jdbc:mysql://localhost:3306/student";
-                String user = "sahal";
-                String password = "Sahal@123";
+                String user = "devika";
+                String password = "devika12@24";
 
                 Connection con = DriverManager.getConnection(url, user, password);
 
                 Statement st = con.createStatement();
 
                 String createtable = "CREATE TABLE student ( id INT PRIMARY KEY, name VARCHAR(50), age INT)";
-                String insert = "INSERT INTO student VALUES (1, 'Rahul', 20)";
+                String insert = "INSERT INTO student VALUES (1, 'Niha', 20)";
                 String update = "UPDATE student SET age = 21 WHERE id = 1";
                 String select = "SELECT * from student";
                 String delete = "DELETE FROM student WHERE id = 1";
