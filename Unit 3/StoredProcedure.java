@@ -21,7 +21,7 @@ public class StoredProcedure {
             statement.executeUpdate("CREATE PROCEDURE get_student(IN student_roll INT) SELECT roll_no, name, course FROM students WHERE roll_no = student_roll");
 
             try (CallableStatement call = connection.prepareCall("{call get_student(?)}")) {
-                call.setInt(1, 201);
+                call.setInt(1, 101);
                 try (ResultSet result = call.executeQuery()) {
                     if (result.next()) {
                         System.out.println("Roll number: " + result.getInt("roll_no"));
