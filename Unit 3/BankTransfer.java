@@ -17,7 +17,7 @@ public class BankTransfer {
              Statement setup = connection.createStatement()) {
 
             setup.executeUpdate("CREATE TABLE IF NOT EXISTS bank_accounts (account_no INT PRIMARY KEY, holder_name VARCHAR(50), balance DECIMAL(10, 2) NOT NULL)");
-            setup.executeUpdate("INSERT INTO bank_accounts VALUES (1001, 'Asha', 5000.00), (1002, 'Bala', 3000.00) ON DUPLICATE KEY UPDATE account_no = VALUES(account_no)");
+            setup.executeUpdate("INSERT INTO bank_accounts VALUES (101, 'Niha', 5000.00), (102, 'Anha', 2000.00) ON DUPLICATE KEY UPDATE account_no = VALUES(account_no)");
 
             System.out.print("Enter sender account number: ");
             int sender = Integer.parseInt(input.nextLine());
