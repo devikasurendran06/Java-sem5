@@ -15,7 +15,7 @@ public class StoredProcedure {
              Statement statement = connection.createStatement()) {
 
             statement.executeUpdate("CREATE TABLE IF NOT EXISTS students (  roll_no INT PRIMARY KEY, name VARCHAR(50), course VARCHAR(50))");
-            statement.executeUpdate("INSERT INTO students VALUES (201, 'Ravi', 'BCA') ON DUPLICATE KEY UPDATE name = 'Ravi', course = 'BCA'");
+            statement.executeUpdate("INSERT INTO students VALUES (101, 'Niha', 'CSE') ON DUPLICATE KEY UPDATE name = 'Niha', course = 'CSE'");
 
             statement.executeUpdate("DROP PROCEDURE IF EXISTS get_student");
             statement.executeUpdate("CREATE PROCEDURE get_student(IN student_roll INT) SELECT roll_no, name, course FROM students WHERE roll_no = student_roll");
