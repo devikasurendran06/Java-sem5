@@ -18,7 +18,7 @@ public class ResultSet {
              Statement setup = connection.createStatement()) {
 
             setup.executeUpdate("CREATE TABLE IF NOT EXISTS students (roll_no INT PRIMARY KEY, name VARCHAR(50), course VARCHAR(50))");
-            setup.executeUpdate("INSERT INTO students VALUES (301, 'Maya', 'BCA'), (302, 'Arun', 'BSc'), (303, 'Neha', 'BCom') ON DUPLICATE KEY UPDATE name = VALUES(name), course = VALUES(course)");
+            setup.executeUpdate("INSERT INTO students VALUES (101, 'Niha', 'CSE'), (102, 'Anha', 'ME'), (103, 'Ruah', 'EC') ON DUPLICATE KEY UPDATE name = VALUES(name), course = VALUES(course)");
 
             try (Statement statement = connection.createStatement(
                     ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
