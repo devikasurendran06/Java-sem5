@@ -3,8 +3,8 @@ import java.util.Scanner;
 class jdbc3 {
         public static void main(String args[]) throws Exception {
                 String url = "jdbc:mysql://localhost:3306/student";
-                String user = "sahal";
-                String password = "Sahal@123";
+                String user = "devika";
+                String password = "devika12@24";
 
                 Connection con = DriverManager.getConnection(url, user, password);
 
